@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding-top: 480px;
+  height: 100vh;
+  background: url('./images/bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* keeps image fixed while scrolling */
+}
+
+/* Navbar inside Hero */
+.hero .navbar {
+  position: fixed;        /* fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;          /* above everything */
+  background-color: rgba(188, 178, 178, 0.3); /* semi-transparent for blur */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Text Styling */
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(246, 240, 240);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+ 
+
+  transform: translateY(-50%);
+}
+
+.hero:hover .hero-title {
+  color: #e5e4de; /* gold highlight */
+  transform: scale(1.2);
+  text-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+}
+
+/* Nav links style */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Card Styling */
+.card-img-top {
+  height: 250px;
+  object-fit: fill;
+  width: 190px;
+}
+
+.card-body {
+  padding: 10px;
+  min-width: auto;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+/* Blackish section */
+.blackish {
+  background-color: black;
+}
